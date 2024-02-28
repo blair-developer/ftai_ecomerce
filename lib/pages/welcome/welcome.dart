@@ -5,16 +5,23 @@ class Welcome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
        body: Stack(
         children: [
-          Positioned(
+             Container(
+             color: Colors.blueAccent,
+             width: 400,
+             height: 500,
+             child: Text("hey"),
+
+          ),
+           Positioned(
             child: Text("widget 1"),
             bottom: 100,
             left: 20,
             ),
-             Positioned(
-            child: Text("widget 1"),
+           Positioned(
+            child: Text("widget 2", style: TextStyle(fontSize: 20),),
             bottom: 100,
             left: 200,
             ),
