@@ -8,22 +8,25 @@ class Welcome extends StatelessWidget {
     return Scaffold(
        body: Stack(
         children: [
-             Container(
-             color: Colors.blueAccent,
-             width: 400,
-             height: 500,
-             child: Text("hey"),
-
-          ),
+            PageView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                 Column(
+                  children: [
+                    Image.asset("assets/images/1.jpeg", fit: BoxFit.fitWidth,),
+                    Text("First commit and push", style: TextStyle(
+                      color: Colors.blue,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold
+                    ),)
+                  ],
+                 )
+              ],
+             ),
            Positioned(
             child: Text("widget 1"),
             bottom: 100,
             left: 20,
-            ),
-           Positioned(
-            child: Text("widget 2", style: TextStyle(fontSize: 20),),
-            bottom: 100,
-            left: 200,
             ),
         ],
        ),
