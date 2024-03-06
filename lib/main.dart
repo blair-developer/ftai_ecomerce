@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ftai_ecomerce/common/widgets/app_styles.dart';
 import 'package:ftai_ecomerce/pages/signin/sign_in.dart';
 import 'package:ftai_ecomerce/pages/welcome/welcome.dart';
 
@@ -16,11 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.appThemeData,
       initialRoute: "/",
       routes: {
         "/":(context)=>Welcome(),

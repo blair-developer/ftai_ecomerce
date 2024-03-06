@@ -36,3 +36,20 @@ Widget text14Normal({required String text,Color color = AppColors.primaryThreeEl
           ),
   );
 }
+
+Widget textUnderline({String text="your text"}) {
+  return GestureDetector(
+    onTap: () {
+      
+    },
+    child: Text(
+      text, style: TextStyle(
+        color: AppColors.primaryText,
+        decoration: TextDecoration.underline,
+        decorationColor: AppColors.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 12,
+      ),
+    ),
+  );
+}
