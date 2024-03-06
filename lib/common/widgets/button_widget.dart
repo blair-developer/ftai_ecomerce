@@ -1,16 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:ftai_ecomerce/common/utils/app_colors.dart';
+import 'package:ftai_ecomerce/common/widgets/app_bar.dart';
 import 'package:ftai_ecomerce/common/widgets/app_shadow.dart';
 import 'package:ftai_ecomerce/common/widgets/text_widget.dart';
+import 'package:ftai_ecomerce/pages/signin/widgets/sign_in_widget.dart';
+import 'package:ftai_ecomerce/pages/signup/sign_up.dart';
 
 Widget appButton({
   double width=325,
   double height=50,
   bool isLogin=true,
+  BuildContext? context,
   String buttonName=""}){
   return GestureDetector(
     onTap: () {
-      
+      Navigator.push(
+        context!, 
+        MaterialPageRoute(builder: (context)=> SignUp()
+      )
+        );
     },
     child: Container(
       width: width,
